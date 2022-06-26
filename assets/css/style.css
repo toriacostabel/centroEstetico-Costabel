@@ -1,0 +1,934 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/*  font-family: 'Bitter', serif;
+    font-family: 'Montserrat', sans-serif;  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media(min-width:320px){
+    .grid{
+        display: grid; 
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 100px 200px auto 150px;
+        grid-template-areas: "navbar navbar navbar "
+                             "header header header "
+                             "main   main   main   "
+                             "footer footer footer ";
+    } 
+
+    /*----------------navbar------------------*/
+    .navbar{
+        grid-area: navbar;
+        width: 100%;
+        height: 100px;
+        background-color:#F99AAA;
+        position: fixed;
+        font-weight: bold;
+        align-items: center;
+    }
+    .navbar ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .navbar ul li{
+        list-style: none;
+        padding: 5px;
+        font-size: 18px;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        font-weight: 500;
+        color: black;
+    }
+    .navbar ul li a:hover{
+        color: #FFCDD4;
+    }
+    /*-------------------header-------------------*/
+    .header{
+        grid-area: header;
+        background-color: rgb(238, 98, 138);
+        width: 100%;
+        height: 190px;
+        margin: 0;
+        padding: 0;
+    }
+    .headerH1{
+        padding-top: 50px;
+        font-weight: 500;
+        font-size: 30px;
+        text-align: center;
+    }
+    .headerH2{
+        padding-top: 10px;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+    }
+    /*-------------------main------------------------*/
+    .main{
+        grid-area: main;
+    }
+    .slideShow{
+        margin: auto;
+        margin-top: 10px;
+        background-image: url(../img/depilacionLaserPiernas.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 90%;
+        height: 190px;
+    }
+    .promociones{
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .promocion{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 90%;
+        height: 380px;
+        background-color:  #ffcdd4;
+        margin: 5px;
+        border-radius: 8px;
+        align-items: center;
+    }
+    .promoImgMulti{
+        background-image: url("../img/promoMulti.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80%;
+        height: 40%;
+    }
+    .promoImgModelado{
+        background-image: url("../img/promoModelado.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80%;
+        height: 40%;
+    }
+    .promoImgAmistad{
+        background-image: url("../img/promoAmistad.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80%;
+        height: 40%;
+    }
+    .promocionH2{
+        margin: 10px 0 0 0;
+    }
+    .promocionP1{
+        font-weight: 700;
+        text-align: center;
+        width: 90%;
+    }
+    .promocionP2{
+        text-align: center;
+        width: 90%;
+    }
+    .promocionP3{
+        text-align: center;
+        width: 90%;
+    }
+    .comprar{
+        width: 80%;
+        height: 30px;
+        background-color: white;
+        border: 0;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    /*--------------------servicios--------------------*/
+    .serviciosContainer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .serviciosTitulo{
+        font-size: 45px;
+        text-align: center;
+        margin: 24px 0px 0px 0px;
+    }
+    .servicio{
+        width: 94%;
+        margin: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #FFCDD4;
+        border-radius: 10px;
+    } 
+    .servicioH3{
+        font-size: 30px;
+        margin: 20px; 
+    }
+    .servicioH3img{
+        display: flex;
+        height: 100%;
+        width: 90%;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .servicioTxtContainer{
+        padding: 15px;
+        line-height: 22px;
+        text-align: center;
+        justify-content: center;
+    }
+    .servicioTxt2{
+        display: none; /* que se muestre al hacer click en ver mas */
+    }
+    .servicioImgContainer{
+        width: 100%;
+        height: 180px;
+    }
+    .servicioImgDepilacion{
+        background-image: url(../img/depilacionLaserServicios.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .servicioImgUltracavitacion{
+        background-image: url(../img/ultracavitacionServicios.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .servicioImgElectrodos{
+        background-image: url(../img/electrodosServicios.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .servicioImgModelador{
+        background-image: url(../img/masajeModeladorServicios.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px; 
+    }
+    .verMas{
+        background-color: rgb(238, 98, 138);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        width: 35%;
+        height: 22px;
+        margin:10px 32.5% 0px 32.5%;
+    }
+    /*-----------------------quienSoy---------------------*/
+    .quienSoyTitulo{
+        font-size: 45px;
+        text-align: center;
+        margin: 24px 0px 0px 0px;
+    }
+    .quienSoyContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+    .quienSoyTxt{
+        width: 90%;
+        margin: 0px 15px 15px 15px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #FFCDD4;
+    }
+    .quienSoyNombre{
+        padding: 20px 0px 8px 0px;
+    }
+    .quienSoyH3{
+        padding: 8px;
+    }
+    .quienSoyP{
+        padding: 5px;
+    }
+    .quienSoyLastP{
+        padding: 5px 5px 20px 5px;
+    }
+    .fotoPersonal{
+        background-image: url(../img/fotoPersonal.jpg);
+        border-radius: 10px;
+        border: 20px solid #FFCDD4;
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 15px;
+    }
+    /*--------------------footer-------------------*/
+    .footer{
+        grid-area: footer;
+        background-color:rgb(238, 98, 138);
+    } 
+    .footerContainer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .footerCopyright{
+        padding: 24px 0px 15px 0px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bolder;
+    } 
+    .footerNav{
+        width: 100%;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footerNav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footerNav ul li{
+        list-style: none;
+        padding: 5px;
+    }
+    .footerNav ul li a{
+        text-decoration: none;
+        font-weight: 500;
+        color: black;
+    }
+    .footerNav ul li a:hover{
+        color: #FFCDD4;
+    }
+}
+
+/*--------------media768px-----------------*/
+@media(min-width:768px){
+    .grid{
+        display: grid; 
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 100px 180px auto 110px;
+        grid-template-areas: "navbar navbar navbar "
+                             "header header header "
+                             "main   main   main   "
+                             "footer footer footer ";
+
+    } 
+    /*----------------navbar------------------*/
+    .navbar{
+        grid-area: navbar;
+        width: 100%;
+        height: 100px;
+        background-color:#F99AAA;
+        position: fixed;
+        font-weight: bold;
+        display: flex;
+    }
+    .navbar ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .navbar ul li{
+        list-style: none;
+        padding: 5px;
+        font-size: 20px;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        font-weight: 500;
+        color: black;
+    }
+    .navbar ul li a:hover{
+        color: #FFCDD4;
+    }
+    /*-------------------header-------------------*/
+    .header{
+        grid-area: header;
+        background-color: rgb(238, 98, 138);
+        width: 100%;
+        height: 180px;
+    }
+    .headerH1{
+        padding-top: 50px;
+        font-weight: 500;
+        font-size: 40px;
+        text-align: center;
+    }
+    .headerH2{
+        padding-top: 10px;
+        font-weight: 400;
+        font-size: 25px;
+        text-align: center;
+    }
+    /*-------------------main------------------------*/
+    .main{
+        grid-area: main;
+    }
+    .slideShow{
+        margin: auto;
+        margin-top: 10px;
+        background-image: url(../img/depilacionLaserPiernas.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 90%;
+        height: 300px;
+    }
+    .promociones{
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .promocion{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 90%;
+        height: 380px;
+        background-color:  #ffcdd4;
+        margin: 5px;
+        border-radius: 8px;
+        align-items: center;
+    }
+    .promoImgMulti{
+        background-image: url("../img/promoMulti.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80%;
+        height: 40%;
+    }
+    .promoImgModelado{
+        background-image: url("../img/promoModelado.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80%;
+        height: 40%;
+    }
+    .promoImgAmistad{
+        background-image: url("../img/promoAmistad.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80%;
+        height: 40%;
+    }
+    .promocionH2{
+        margin: 10px 0 0 0;
+    }
+    .promocionP1{
+        font-weight: 700;
+        text-align: center;
+        width: 90%;
+    }
+    .promocionP2{
+        text-align: center;
+        width: 90%;
+    }
+    .promocionP3{
+        text-align: center;
+        width: 90%;
+    }
+    .comprar{
+        width: 80%;
+        height: 30px;
+        background-color: white;
+        border: 0;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    /*--------------------servicios--------------------*/
+    .serviciosContainer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .serviciosTitulo{
+        font-size: 45px;
+        text-align: center;
+        margin: 24px 0px 0px 0px;
+    }
+    .servicioH3{
+        font-size: 30px;
+        margin: 20px;
+        
+    }
+    .servicio{
+        width: 94%;
+        margin: 2%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #FFCDD4;
+        border-radius: 10px;
+    }
+    .servicioH3img{
+        display: flex;
+        width: 500px;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .servicioTxtContainer{
+        padding: 15px;
+        line-height: 22px;
+        text-align: center;
+        justify-content: center;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+    .servicioTxt2{
+        display: contents;
+    }
+    .servicioImgContainer{
+        width: 100%;
+        height: 240px;
+        padding: 15px;
+    }
+    .servicioImgDepilacion{
+        background-image: url(../img/depilacionLaserServicios.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .servicioImgUltracavitacion{
+        background-image: url(../img/ultracavitacionServicios.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .servicioImgElectrodos{
+        background-image: url(../img/electrodosServicios.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .servicioImgModelador{
+        background-image: url(../img/masajeModeladorServicios.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .verMas{
+       display: none;
+    }
+    /*-----------------------quienSoy---------------------*/
+    .quienSoyTitulo{
+        font-size: 45px;
+        text-align: center;
+        margin: 24px 0px 0px 0px;
+    }
+    .quienSoyContainer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+    .quienSoyTxt{
+        margin: 2px;
+        width: 45%;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #FFCDD4;
+    }
+    .quienSoyNombre{
+        font-size: 24px;
+        padding: 3%;
+    }
+    .quienSoyH3{
+        font-size: 20px;
+        padding: 2%;
+    }
+    .quienSoyP{
+        font-size: 16.5px;
+        padding: 3%;
+    }
+    .quienSoyLastP{
+        font-size: 16.5px;
+        padding: 3%;
+    }
+
+    .fotoPersonal{
+        background-image: url(../img/fotoPersonal.jpg);
+        border-radius: 10px;
+        border: 20px solid #FFCDD4;
+        width: 50%;
+        height: 650px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+    }
+
+    /*--------------------footer-------------------*/
+    .footer{
+        grid-area: footer;
+        background-color:rgb(238, 98, 138);
+        height: 120px;
+    } 
+    .footerContainer{
+        width: 100%;
+        height: 100%;
+    }
+    .footerCopyright{
+        padding: 24px 0px 15px 0px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bolder;
+    } 
+    .footerNav{
+        width: 100%;
+        font-weight: bold;
+        text-align: center;
+    }
+    .ulFooter{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .ulFooter li{
+        list-style: none;
+    }
+    .ulFooter li a{
+        text-decoration: none;
+        font-weight: 500;
+        color: black;
+    }
+    .ulFooter ul li:hover{
+        color: #FFCDD4;
+    }
+}
+
+/*-------------------media1000px---------------------*/
+@media(min-width:1000px){
+    .grid{
+        display: grid; 
+        grid-template-columns: repeat(3,1fr); 
+        grid-template-rows: 100px 200px auto 100px;
+        grid-template-areas: "navbar navbar navbar "
+                             "header header header "
+                             "main   main   main   " 
+                             "footer footer footer ";
+    } 
+    /*----------------navbar------------------*/
+    .navbar{
+        grid-area: navbar;
+        width: 100%;
+        height: 100px;
+        background-color:#F99AAA;
+        position: fixed;
+        font-weight: bold;
+        display: flex;
+    }
+    .navbar ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .navbar ul li{
+        list-style: none;
+        font-size: 26px;
+        padding: 5px;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        font-weight: 500;
+        color: black;
+    }
+    .navbar ul li a:hover{
+        color: #FFCDD4;
+    }
+    /*--------------------header--------------------*/
+    .header{
+        grid-area: header;
+        background-color: rgb(238, 98, 138);
+        width: 100%;
+        height: 200px;
+    }
+    .headerH1{
+        padding-top: 50px;
+        font-weight: 500;
+        font-size: 50px;
+        text-align: center;
+    }
+    .headerH2{
+        padding-top: 10px;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+    }
+    /*--------------------home--------------------*/
+    .main{
+        grid-area: main;
+    }
+    .slideShow{
+        margin: auto;
+        margin-top: 20px;
+        background-image: url(../img/depilacionLaserPiernas.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 90%;
+        height: 400px;
+    }
+
+    .promociones{
+        margin: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .promocion{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 300px;
+        height: 380px;
+        background-color:  #ffcdd4;
+        margin: 5px;
+        border-radius: 8px;
+        align-items: center;
+
+    }
+    .promoImgMulti{
+        background-image: url("../img/promoMulti.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80%;
+        height: 40%;
+    }
+    .promoImgModelado{
+        background-image: url("../img/promoModelado.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80%;
+        height: 40%;
+    }
+    .promoImgAmistad{
+        background-image: url("../img/promoAmistad.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80%;
+        height: 40%;
+    }
+    .promocionH2{
+        margin: 10px 0 0 0;
+    }
+    .promocionP1{
+        font-weight: 700;
+        text-align: center;
+    }
+    .promocionP2{
+        text-align: center;
+    }
+    .promocionP3{
+        text-align: center;
+    }
+    .comprar{
+        width: 80%;
+        height: 30px;
+        background-color: white;
+        border: 0;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+
+    /*--------------------servicios--------------------*/
+    .serviciosContainer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 94%;
+        margin: 3%;
+    }
+    .serviciosTitulo{
+        font-size: 45px;
+        text-align: center;
+        margin: 24px 0px 0px 0px;
+    }
+    .servicioH3{
+        font-size: 30px;
+    }
+    .servicio{
+        width: 48%;
+        margin: 10px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #FFCDD4;
+        border-radius: 10px;
+    }
+    .servicioH3img{
+        display: flex;
+        height: 100%;
+        width: 500px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .servicioTxtContainer{
+        padding: 15px;
+        line-height: 22px;
+        text-align: center;
+        justify-content: center;
+    }
+    .servicioTxt2{
+        display: contents;
+    }
+    .servicioImgContainer{
+        width: 96%;
+        margin: 2%;
+        height: 180px;
+    }
+    .servicioImgDepilacion{
+        background-image: url(../img/depilacionLaserServicios.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .servicioImgUltracavitacion{
+        background-image: url(../img/ultracavitacionServicios.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .servicioImgElectrodos{
+        background-image: url(../img/electrodosServicios.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .servicioImgModelador{
+        background-image: url(../img/masajeModeladorServicios.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .verMas{
+        display: none;
+    }
+    /*-----------------------quienSoy---------------------*/
+    .quienSoyTitulo{
+        font-size: 45px;
+        text-align: center;
+        margin: 24px 0px 0px 0px;
+    }
+    .quienSoyContainer{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+    .quienSoyTxt{
+        width: 43%;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #FFCDD4;
+    }
+    .quienSoyNombre{
+        font-size: 35px;
+        padding: 3%;
+    }
+    .quienSoyH3{
+        font-size: 30px;
+        padding: 2%;
+    }
+    .quienSoyP{
+        font-size: 20px;
+        padding: 3%;
+    }
+    .quienSoyLastP{
+        font-size: 20px;
+        padding: 3%;
+    }
+
+    .fotoPersonal{
+        background-image: url(../img/fotoPersonal.jpg);
+        border-radius: 10px;
+        border: 20px solid #FFCDD4;
+        width: 50%;
+        height: 750px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+    }
+
+    /*--------------------footer--------------------*/
+    .footer{
+        grid-area: footer;  
+        height: 120px;  
+        background-color:rgb(238, 98, 138);
+        display: flex;
+        flex-direction: column;
+    }
+    .footerContainer{
+        width: 100%;
+        height: 100%;
+    }
+    .footerCopyright{
+        padding: 24px 0px 15px 0px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bolder;
+    } 
+}
