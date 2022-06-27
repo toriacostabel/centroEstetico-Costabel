@@ -731,7 +731,11 @@ body{
         margin: 5px;
         border-radius: 8px;
         align-items: center;
+<<<<<<< HEAD
 
+=======
+        transition: all 0.5s;
+>>>>>>> branchAnimacion
     }
     .promoImgMulti{
         background-image: url("../img/promoMulti.jpg");
@@ -779,7 +783,14 @@ body{
         font-weight: 600;
         font-size: 16px;
     }
+<<<<<<< HEAD
 
+=======
+    .promocion:hover{
+        transform: translateY(-15px);
+        box-shadow: 0px 5px 10px 5px #F99AAA;
+    }
+>>>>>>> branchAnimacion
 
     /*--------------------servicios--------------------*/
     .serviciosContainer{
@@ -864,6 +875,12 @@ body{
     .verMas{
         display: none;
     }
+<<<<<<< HEAD
+=======
+    @keyframes fadeRight {
+        
+    }
+>>>>>>> branchAnimacion
     /*-----------------------quienSoy---------------------*/
     .quienSoyTitulo{
         font-size: 45px;
