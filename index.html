@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>Inicio</title>
 </head>
 <body class="grid">
@@ -21,7 +20,7 @@
     </nav>
 
     <header class="header">
-        <h1 class="headerH1">VIRGINIA RODRIGUEZ</h1>
+        <h1 class="headerH1" >VIRGINIA RODRIGUEZ</h1>
         <h2 class="headerH2">ESTETICA INTEGRAL</h2>
     </header>
 
@@ -34,13 +33,15 @@
         
         <div class="promociones">
 
-            <div class="promocion">
-                <h2 class="promocionH2">Promo Modelado</h2>
-                <div class="promoImgModelado"></div>
-                <p class="promocionP1">Tratamiento completo:</p>
-                <p class="promocionP2">ultracavitacion + electrodos
-                <p class="promocionP3"> + masaje modelador!</p>
-                <button type="button" class="comprar">COMPRAR</button>
+            <div class="wow animate__bounceInDown">
+                <div class="promocion">
+                    <h2 class="promocionH2">Promo Modelado</h2>
+                    <div class="promoImgModelado"></div>
+                    <p class="promocionP1">Tratamiento completo:</p>
+                    <p class="promocionP2">ultracavitacion + electrodos
+                    <p class="promocionP3"> + masaje modelador!</p>
+                    <button type="button" class="comprar">COMPRAR</button>
+                </div>
             </div>
 
             <div class="promocion">
@@ -77,5 +78,9 @@
             </nav>
         </div>
     </footer>
+    <script src="js/wow/min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>

@@ -731,7 +731,7 @@ body{
         margin: 5px;
         border-radius: 8px;
         align-items: center;
-
+        transition: all 0.5s;
     }
     .promoImgMulti{
         background-image: url("../img/promoMulti.jpg");
@@ -779,7 +779,10 @@ body{
         font-weight: 600;
         font-size: 16px;
     }
-
+    .promocion:hover{
+        transform: translateY(-15px);
+        box-shadow: 0px 5px 10px 5px #F99AAA;
+    }
 
     /*--------------------servicios--------------------*/
     .serviciosContainer{
@@ -863,6 +866,9 @@ body{
     }
     .verMas{
         display: none;
+    }
+    @keyframes fadeRight {
+        
     }
     /*-----------------------quienSoy---------------------*/
     .quienSoyTitulo{
